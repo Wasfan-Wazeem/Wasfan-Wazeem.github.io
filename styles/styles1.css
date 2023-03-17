@@ -1,5 +1,9 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
+html{
+    scroll-behavior: smooth;
+}
+
 .has-bg-img { 
     background: url('../images/Main4.png')center center; 
     background-size: cover;
@@ -32,7 +36,6 @@
     color: #ffffff;
 }
 
-
 .navbar-start{
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -45,10 +48,14 @@
     padding-right: 1rem;
 }
 
+
 .navbar-item:hover{
     text-decoration: underline;
     text-decoration-color: #FBA820;
     background-color: transparent;
+    color: black;
+    
+    border-radius: 10px;
 }
 
 .main-text{
@@ -63,6 +70,9 @@
     font-size: 3.5rem;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+
+    animation: fadeInDown ease 2s;
+    animation-iteration-count: 1;
 }
 
 .main-text-2{
@@ -73,6 +83,9 @@
     font-size: 3.5rem;
     letter-spacing: 0.02em;
     color: #FBA820;
+
+    animation: fadeInDown ease 2s;
+    animation-iteration-count: 1;
 }
 
 .main-text-3{
@@ -83,6 +96,9 @@
     font-size: 1.75rem;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+
+    animation: fadeInUp ease 2s;
+    animation-iteration-count: 1;
 }
 
 .get-in-touch-button{
@@ -101,6 +117,9 @@
     border-color: #FBA820;
     background-color: transparent;
     cursor: pointer;
+
+    animation: fadeInUp ease 2s;
+    animation-iteration-count: 1;
 }
 
 .icons{
@@ -111,6 +130,9 @@
 .icons i{
     padding-right: 1rem;
     color: #FFFFFF;
+
+    animation: rotateIn ease 2s;
+    animation-iteration-count: 1;
 }
 
 .about{
@@ -425,7 +447,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 185.18%;
+    line-height: 130%;
     text-align: center;
     letter-spacing: 0.01em;
     color: #868686;
@@ -469,7 +491,7 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.01em;
     color: #868686;
     padding-left: 0.8rem;
@@ -525,7 +547,7 @@
 }
 
 .testimonial-text{
-    width: 500px;
+    width: 550px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -559,6 +581,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    margin-left: 0.8rem;
 }
 
 /* CONTACT */
@@ -717,3 +740,38 @@
     text-align: center;
     color: #ABABAB;
 }
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+       opacity: 0;
+       transform: translateY(+20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  }
+  
+  @keyframes rotateIn {
+    0% {
+       transform-origin: center center;
+       transform: rotate(-200deg);
+       opacity: 0;
+    }
+    100% {
+       transform-origin: center center;
+       transform: rotate(0);
+       opacity: 1;
+    } 
+  } 
